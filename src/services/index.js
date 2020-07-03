@@ -1,0 +1,33 @@
+const users = require('./users/users.service.js');
+const organizations = require('./organizations/organizations.service.js');
+const groups = require('./groups/groups.service.js');
+const scouts = require('./scouts/scouts.service.js');
+const provision = require('./provision/provision.service.js');
+const deploy = require('./deploy/deploy.service.js');
+const roles = require('./roles/roles.service.js');
+const usersToOrganizations = require('./users_to_organizations/users_to_organizations.service.js');
+const usersToGroups = require('./users_to_groups/users_to_groups.service.js');
+const onramp = require('./onramp/onramp.service.js');
+const signup = require('./signup/signup.service.js');
+const messages = require('./messages/messages.service.js');
+const authmanagement = require('./authmanagement/authmanagement.service.js');
+const trackers = require('./trackers/trackers.service.js');
+const events = require('./events/events.service.js');
+// eslint-disable-next-line no-unused-vars
+module.exports = function (app) {
+  app.configure(users);
+  app.configure(organizations);
+  app.configure(groups);
+  app.configure(scouts);
+  app.configure(provision);
+  app.configure(deploy);
+  app.configure(roles);
+  app.configure(usersToOrganizations);
+  app.configure(usersToGroups);
+  app.configure(onramp);
+  app.configure(signup);
+  app.configure(messages);
+  app.configure(authmanagement);
+  app.configure(trackers);
+  app.configure(events);
+};
